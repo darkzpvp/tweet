@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter-like</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('twitter_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #1da1f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .contenido {
+            margin-top: 20px;
+        }
+
+        .twitter-icon {
+            width: 30px;
+            height: 30px;
+            background: url('twitter_icon.png') no-repeat center center;
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+        .tweet {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            display: flex;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: url('user_avatar.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .tweet-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tweet-content p {
+            margin: 0;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="twitter-icon"></div>
+        <input type="text" class="palabra" placeholder="¿Qué estás pensando?">
+        <div class="button-container">
+            <button class="enviar">Tweet</button>
+            <button class="borrar">Borrar</button>
+        </div>
+        <div class="error-message"></div>
+
+        <div class="contenido">
+            <div class="tweet">
+                <div class="user-avatar"></div>
+                <div class="tweet-content">
+                    
+                </div>
+            </div>
+           
+            <!-- Puedes agregar más tweets aquí -->
+        </div>
+    </div>
+</body>
+</html>
